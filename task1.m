@@ -16,5 +16,5 @@ function A_k = task1 (image, k)
     
     
     A_k = U * S * Vt;
-    imshow(uint8(A_k));
+    % imshow(uint8(A_k));
 endfunction
