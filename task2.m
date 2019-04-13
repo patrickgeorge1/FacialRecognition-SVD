@@ -7,7 +7,7 @@ function task2()
   if (m < n) n = m   % get minumum 
   endif
 
-  X = 0:n-1;
+  X = 1:n;
   sums = 0;
   
   % primul graph
@@ -57,17 +57,16 @@ function task2()
     
   % al patrulea graph
   Y4 = [];
-  X2 = 1:n-1;
   aux2 = m + n + 1;
   aux2 = aux2 / m;
   aux2 = aux2 / n;
   added = 0;
-  for i = 1:n-1
+  for i = 1:n
     added = aux2 * i;
     Y4 = [Y4 added];
   endfor
   figure(4)
-  plot(X2, Y4);
+  plot(X, Y4);
   
     
     
