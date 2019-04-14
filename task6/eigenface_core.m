@@ -6,9 +6,21 @@ function [m A eigenfaces pr_img] = eigenface_core(database_path)
     numFiles = length(jpgFiles);
     mydata = cell(1,numFiles);
     T = [];
-    for k = 1:numFiles
+    for k = 1:numFiles       
         vect = [];
-        image_matrix = double(rgb2gray(imread(strcat("dataset/", jpgFiles(k).name))));
+        
+        
+        % disp(strcat("dataset/", jpgFiles(k).name))
+        denumire_fisier = database_path;
+        denumire_fisier = strcat(denumire_fisier, '/');
+        denumire_fisier = strcat(denumire_fisier, int2str(k));
+        denumire_fisier = strcat(denumire_fisier, ".jpg");
+        %image_matrix = double(rgb2gray(imread(strcat("dataset/", jpgFiles(k).name))));
+        image_matrix = double(rgb2gray(imread(denumire_fisier)));
+        
+        
+        
+        
         vect = matrixToArray (image_matrix);
         T = [T vect];
     endfor
