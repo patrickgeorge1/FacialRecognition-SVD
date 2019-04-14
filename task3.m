@@ -1,4 +1,6 @@
 function [A_k S] = task3(image, k)
+  pkg load image;
+  
   image_matrix = double(imread(image)); 
   [m n] = size(image_matrix);
   

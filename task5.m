@@ -1,4 +1,5 @@
 function task5()
+  pkg load image;
   
   image_matrix = double(imread("in/images/image1.gif")); 
   [m n] = size(image_matrix);

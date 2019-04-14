@@ -1,4 +1,5 @@
 function task2()
+  pkg load image;
   
   image_matrix = double(imread("in/images/image1.gif"));
   [U, S, V] = svd(image_matrix);
